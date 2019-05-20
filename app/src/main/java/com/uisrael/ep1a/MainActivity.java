@@ -1,5 +1,6 @@
 package com.uisrael.ep1a;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -32,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Calcular(){
+        //se carga en variables los contenidos de los textos.
         String v_opciones = ob_spinner.getSelectedItem().toString();
         Double v_valor1 = Double.parseDouble(ob_valor1.getText().toString());
         Double v_valor2 = Double.parseDouble(ob_valor2.getText().toString());
         Double v_resultado = 0.0;
 
+        //Se revisa que opcion escogio y en funcion a ello se realiza la operacion deseada.
         switch(v_opciones){
             case "Suma":
                 //Para la suma
@@ -61,5 +64,14 @@ public class MainActivity extends AppCompatActivity {
             default: //For all other cases, do this
                 break;
         }
+
+        //se pasa los parametros a la activity d resultado
+        //Se crea el ovjeto para los activity con parametros (1a Activty, 2a Activty)
+        Intent act_resutado = new Intent(this, resultado.class);
+        //Se pasa os datos a la activity resultado
+        act_resutado.putExtra("resultado",v_resultado.toString());
+        //Se llama a la siguiente activity
+        startActivity(act_resutado);
+
     }
 }
