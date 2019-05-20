@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EP1a</string>
+    <string name="tv_encabezado">EP1 A</string>
+    <string name="sp_opciones">-Seleccionar-</string>
+    <string name="tv_valor1">Numero 1</string>
+    <string name="tv_valor2">Numero 2</string>
+    <string name="bt_aceptar">Calcular</string>
 </resources>
