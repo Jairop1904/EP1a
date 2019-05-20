@@ -29,7 +29,8 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/bt_aceptar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_valor1"
@@ -43,7 +44,8 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/et_valor2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/bt_aceptar"
